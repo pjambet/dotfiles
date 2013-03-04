@@ -1,0 +1,30 @@
+alias rm="rm -i"
+
+#wopata shortcuts
+alias wopata="cd ~/Documents/wopata"
+alias pillango="cd ~/Documents/wopata/pillango"
+alias seatizen-server="cd ~/Documents/wopata/seatizen-server"
+
+#git aliases
+alias master="git co master"
+alias staging="git co staging"
+alias stable="git co stable"
+alias gdi="git diff"
+alias gds="git diff --staged"
+
+#bundler aliases
+alias be="bundle exec"
+alias ber="bundle exec rake"
+alias bu="bundle update"
+alias bi="bundle install"
+
+#heroku aliases
+alias gph="git push heroku $(current_branch):master"
+
+# my aliases
+alias tvim="/Applications/MacVim.app/Contents/MacOS/Vim"
+
+#project aliases:
+alias prog="cd ~/Documents/prog"
+alias bserv="cd ~/Documents/prog/beech/beech-server"
+alias biphone="cd ~/Documents/prog/beech/beech-iphone"

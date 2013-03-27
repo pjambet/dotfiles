@@ -1,6 +1,0 @@
-[submodule "home/.vim/vim-markdown"]
-	path = home/.vim/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git
-[submodule "home/.vim/bundle/vim-markdown"]
-	path = home/.vim/bundle/vim-markdown
-	url = git://github.com/tpope/vim-markdown.git

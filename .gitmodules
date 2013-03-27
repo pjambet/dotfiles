@@ -99,3 +99,6 @@
 [submodule "vendor/vim-pathogen"]
 	path = vendor/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
+[submodule "home/.oh-my-zsh/"]
+	path = home/.oh-my-zsh
+	url = git://github.com/robbyrussell/oh-my-zsh.git

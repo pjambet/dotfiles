@@ -62,9 +62,6 @@
 	path = home/.vim/bundle/vim-multiedit
 	url = git://github.com/felixr/vim-multiedit.git
   ignore = dirty
-[submodule "home/.vim/bundle/ack"]
-	path = home/.vim/bundle/ack
-	url = https://github.com/mileszs/ack.vim.git
 [submodule "home/.vim/bundle/pydoc"]
 	path = home/.vim/bundle/pydoc
 	url = https://github.com/fs111/pydoc.vim.git

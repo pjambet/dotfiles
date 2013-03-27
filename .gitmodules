@@ -1,0 +1,12 @@
+[submodule "home/.vim/bundle/vim-markdown"]
+	path = home/.vim/bundle/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+[submodule "home/.vim/bundle/ctrlp.vim"]
+	path = home/.vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule "home/.vim/bundle/python-mode"]
+	path = home/.vim/bundle/python-mode
+	url = git://github.com/klen/python-mode.git
+[submodule "home/.vim/bundle/vim-colors-solarized"]
+	path = home/.vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git

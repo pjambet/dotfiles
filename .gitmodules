@@ -102,3 +102,6 @@
 [submodule "home/.oh-my-zsh/"]
 	path = home/.oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.vim"]
+	path = home/.vim
+	url = git://github.com/pjambet/dotvim.git

@@ -18,13 +18,13 @@
 	path = home/.vim/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
 [submodule "home/.vim/bundle/vim-rails"]
-	path = bundle/vim-rails
+	path = home/.vim/bundle/vim-rails
 	url = git://github.com/tpope/vim-rails.git
 [submodule "home/.vim/bundle/vim-rake"]
-	path = bundle/vim-rake
+	path = home/.vim/bundle/vim-rake
 	url = git://github.com/tpope/vim-rake.git
 [submodule "home/.vim/bundle/vim-ruby"]
-	path = bundle/vim-ruby
+	path = home/.vim/bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
 [submodule "home/.vim/bundle/vim-rvm"]
 	path = home/.vim/bundle/vim-rvm

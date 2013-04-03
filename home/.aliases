@@ -1,9 +1,7 @@
 alias rm="rm -i"
 
-#wopata shortcuts
-alias wopata="cd ~/Documents/wopata"
-alias pillango="cd ~/Documents/wopata/pillango"
-alias seatizen-server="cd ~/Documents/wopata/seatizen-server"
+#fueled shortcuts
+alias fueled="cd ~/fueled"
 
 #git aliases
 alias master="git co master"

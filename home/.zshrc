@@ -43,6 +43,9 @@ PATH=$PATH:~/bin
 
 # Custome functions
 mkcd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
 
 plall() {
 for f in com_crm com_family com_social com_users frame_standard31
@@ -54,7 +57,7 @@ done
 eval "$(rbenv init -)"
 
 # hub config
-eval "$(hub alias -s)"
+# eval "$(hub alias -s)"
 
 if [ -f ~/.aliases ]; then
   . ~/.aliases

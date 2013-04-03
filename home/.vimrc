@@ -526,3 +526,6 @@ let g:pymode_run_key = 'R'
 let g:ctrlp_max_height = 20
 
 let g:gitgutter_enabled = 0
+
+map $ g_
+map ; :

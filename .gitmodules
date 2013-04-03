@@ -64,3 +64,9 @@
 [submodule "home/.oh-my-zsh"]
 	path = home/.oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.vim/bundle/vim-autoclose"]
+	path = home/.vim/bundle/vim-autoclose
+	url = git://github.com/Townk/vim-autoclose.git
+[submodule "home/.vim/bundle/vim/visual-star-search"]
+	path = home/.vim/bundle/vim/visual-star-search
+	url = git://github.com/bronson/vim-visual-star-search.git

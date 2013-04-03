@@ -61,6 +61,3 @@
 [submodule "home/.vim/bundle/TaskList"]
 	path = home/.vim/bundle/TaskList
 	url = https://github.com/vim-scripts/TaskList.vim.git
-[submodule "home/.oh_my_zsh"]
-	path = home/.oh_my_zsh
-	url = git://github.com/robbyrussell/oh-my-zsh.git

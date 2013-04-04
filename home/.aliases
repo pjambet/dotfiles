@@ -29,3 +29,5 @@ alias biphone="cd ~/prog/beech/beech-iphone"
 
 # django stuff
 alias djtest="REUSE_DB=1 ./manage.py test"
+
+alias dotfiles="cd ~/.homesick/repos/dotfiles"

@@ -98,9 +98,8 @@ augroup vimrcEx
   autocmd BufReadPost fugitive://* set bufhidden=delete
 
   " Source the vimrc file after saving it
-  if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
-  endif
+  " autocmd bufwritepost .vimrc source $MYVIMRC
+  autocmd! bufwritepost .vimrc source %
 
   autocmd InsertEnter,InsertLeave * set cul!
   au BufLeave,FocusLost * silent! wa
@@ -513,15 +512,6 @@ sunmap w
 " sunmap b
 sunmap e
 
-" Python mode settings
-let g:pymode_lint = 1
-let g:pymode_lint_checker = "pep8,mccabe"
-
-let g:pymode_folding = 0
-let g:pymode_run = 1
-" Key for run python code
-let g:pymode_run_key = 'R'
-
 " CtrlP (awesome!) settings
 let g:ctrlp_max_height = 20
 
@@ -529,3 +519,21 @@ let g:gitgutter_enabled = 0
 
 map $ g_
 map ; :
+
+" vim-gist config
+let g:gist_post_private = 1
+let g:gist_clip_command = 'pbcopy'
+
+" Python mode settings
+let g:pymode_lint = 1
+let g:pymode_lint_checker = "pep8"
+let g:pymode_lint_ignore = "E501"
+
+let g:pymode_folding = 0
+let g:pymode_run = 1
+" Key for run python code
+let g:pymode_run_key = 'R'
+
+let g:pymode_syntax_slow_sync = 0
+
+set autoread

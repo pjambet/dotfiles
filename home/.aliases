@@ -23,9 +23,9 @@ alias gph="git push heroku $(current_branch):master"
 alias tvim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 #project aliases:
-alias prog="cd ~/Documents/prog"
-alias bserv="cd ~/Documents/prog/beech/beech-server"
-alias biphone="cd ~/Documents/prog/beech/beech-iphone"
+alias prog="cd ~/prog"
+alias bserv="cd ~/prog/beech/beech-server"
+alias biphone="cd ~/prog/beech/beech-iphone"
 
 # django stuff
 alias djtest="REUSE_DB=1 ./manage.py test"

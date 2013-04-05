@@ -79,3 +79,9 @@
 [submodule "home/.vim/bundle/webapi-vim"]
 	path = home/.vim/bundle/webapi-vim
 	url = git://github.com/mattn/webapi-vim.git
+[submodule "home/.vim/bundle/closetag.vim"]
+	path = home/.vim/bundle/closetag.vim
+	url = git://github.com/vim-scripts/closetag.vim.git
+[submodule "home/.vim/bundle/xmledit"]
+	path = home/.vim/bundle/xmledit
+	url = git://github.com/sukima/xmledit.git

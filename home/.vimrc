@@ -526,6 +526,7 @@ let g:gist_clip_command = 'pbcopy'
 
 " Python mode settings
 let g:pymode_lint = 1
+let g:pymode_indent = 1
 let g:pymode_lint_checker = "pep8"
 let g:pymode_lint_ignore = "E501"
 

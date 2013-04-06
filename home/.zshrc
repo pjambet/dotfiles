@@ -54,7 +54,7 @@ do
 done
 }
 
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # hub config
 # eval "$(hub alias -s)"

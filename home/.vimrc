@@ -453,7 +453,7 @@ nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 
-set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc
+set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp
 
 " Highlight text over 80
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929

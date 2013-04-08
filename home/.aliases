@@ -9,6 +9,7 @@ alias staging="git co staging"
 alias stable="git co stable"
 alias gdi="git diff"
 alias gds="git diff --staged"
+alias gst="git st"
 
 #bundler aliases
 alias be="bundle exec"
@@ -31,3 +32,6 @@ alias biphone="cd ~/prog/beech/beech-iphone"
 alias djtest="REUSE_DB=1 ./manage.py test"
 
 alias dotfiles="cd ~/.homesick/repos/dotfiles"
+
+# Mou markdown editor alias
+alias mou='open /Applications/Mou.app'

@@ -74,6 +74,7 @@ augroup vimrcEx
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 ts=2 et
   autocmd FileType python,php set sw=4 sts=4 ts=4 et
+  autocmd FileType python setlocal formatoptions+=q
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
   autocmd! BufRead,BufNewFile *.scss setfiletype scss
@@ -538,3 +539,7 @@ let g:pymode_run_key = 'R'
 let g:pymode_syntax_slow_sync = 0
 
 set autoread
+
+" Center screen after each bounce to new search result
+nmap n nzz
+nmap N Nzz

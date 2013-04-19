@@ -35,3 +35,5 @@ alias dotfiles="cd ~/.homesick/repos/dotfiles"
 
 # Mou markdown editor alias
 alias mou='open /Applications/Mou.app'
+
+alias tmux="TERM=screen-256color-bce tmux"

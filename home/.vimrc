@@ -100,7 +100,7 @@ augroup vimrcEx
 
   " Source the vimrc file after saving it
   " autocmd bufwritepost .vimrc source $MYVIMRC
-  autocmd! bufwritepost .vimrc source %
+  autocmd! BufWritePost .vimrc source %
 
   autocmd InsertEnter,InsertLeave * set cul!
   au BufLeave,FocusLost * silent! wa
@@ -457,10 +457,11 @@ nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp
 
 " Highlight text over 80
+highlight clear OverLength
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 " An other option is to set the colorcolumn
-" set colorcolumn=80
+set colorcolumn=80
 
 " Save on focus lost
 
@@ -543,3 +544,6 @@ set autoread
 " Center screen after each bounce to new search result
 nmap n nzz
 nmap N Nzz
+
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>

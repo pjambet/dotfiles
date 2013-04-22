@@ -11,6 +11,7 @@ set nocompatible
 " " allow unsaved background buffers and remember marks/undo for them
 set hidden
 " " remember more commands and search history
+set clipboard=unnamed
 set history=10000
 set expandtab
 set tabstop=2

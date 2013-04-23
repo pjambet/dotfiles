@@ -550,3 +550,10 @@ vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
 call togglebg#map("<F5>")
+
+let current_datetime = strftime('%H:%M:%S.0 %z')
+if current_datetime < "20:00:00.0" || current_datetime > "10:00:00.0"
+  set bg=light
+else
+  set bg=dark
+endif

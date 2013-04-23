@@ -509,7 +509,7 @@ map <leader>sh :split<CR>
 
 
 map <silent> w <Plug>CamelCaseMotion_w
-" map <silent> b <Plug>CamelCaseMotion_b
+map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 " sunmap b

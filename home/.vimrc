@@ -551,9 +551,10 @@ vmap <C-c> :w !pbcopy<CR><CR>
 
 call togglebg#map("<F5>")
 
-let current_datetime = strftime('%H:%M:%S.0 %z')
-if current_datetime < "20:00:00.0" || current_datetime > "10:00:00.0"
-  set bg=light
-else
+let current_day = strftime('%w')
+let current_time = strftime('%H:%M:%S.0 %z')
+if current_day == 0 || current_day == 6 || current_time > "20:00:00.0" || current_time < "10:00:00.0"
   set bg=dark
+else
+  set bg=light
 endif

@@ -548,3 +548,5 @@ nmap N Nzz
 
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
+
+call togglebg#map("<F5>")

@@ -30,7 +30,7 @@ set cursorline
 set cmdheight=2
 set switchbuf=useopen
 set numberwidth=5
-set showtabline=2
+set showtabline=0
 set winwidth=79
 set shell=zsh
 " " Prevent Vim from clobbering the scrollback buffer. See
@@ -124,7 +124,7 @@ colorscheme solarized
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%-4(%m%)%=%-19(%3l,%02c%03V%)
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS

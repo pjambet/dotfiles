@@ -82,6 +82,21 @@ augroup vimrcEx
 
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
+  fun! IsModified()
+    let bufmodified = getbufvar(bufnr('%'), "&mod")
+    echo "foo"
+    if bufmodified == 0
+      highlight StatusLine ctermfg=black
+    else
+      highlight StatusLine ctermfg=red
+    endif
+  endfun
+  " autocmd InsertEnter * call IsModified()
+  " autocmd InsertChange * call IsModified()
+  " autocmd InsertLeave * call IsModified()
+  " autocmd FileChangedShell * call IsModified()
+
+
 
   " Indent p tags
   " autocmd FileType html,eruby if g:html_indent_tags !~ '\\|p\>' | let g:html_indent_tags .= '\|p\|li\|dt\|dd' | endif
@@ -160,6 +175,7 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+" inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ARROW KEYS ARE UNACCEPTABLE
@@ -552,9 +568,12 @@ vmap <C-c> :w !pbcopy<CR><CR>
 call togglebg#map("<F5>")
 
 let current_day = strftime('%w')
-let current_time = strftime('%H:%M:%S.0 %z')
-if current_day == 0 || current_day == 6 || current_time > "20:00:00.0" || current_time < "10:00:00.0"
+let current_time = strftime('%H')
+if current_day == 0 || current_day == 6 || current_time > "20" || current_time < "09"
   set bg=dark
 else
   set bg=light
 endif
+
+map <C-A> gg V G
+set guifont=Inconsolata-dz\ for\ Powerline:h11

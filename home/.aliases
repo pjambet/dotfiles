@@ -1,4 +1,5 @@
 alias rm="rm -i"
+alias lla="ls -la"
 
 #fueled shortcuts
 alias fueled="cd ~/fueled"

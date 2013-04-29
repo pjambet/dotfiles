@@ -38,3 +38,4 @@ alias dotfiles="cd ~/.homesick/repos/dotfiles"
 alias mou='open /Applications/Mou.app'
 
 alias tmux="TERM=screen-256color-bce tmux"
+alias v="vim"

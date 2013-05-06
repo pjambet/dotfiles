@@ -16,6 +16,7 @@ set history=10000
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set shiftround
 set softtabstop=2
 set autoindent
 set laststatus=2
@@ -592,3 +593,9 @@ endfunc
 
 command! NumberToggle call NumberToggle()
 " nnoremap <C-n> :call NumberToggle()<cr>
+
+" Disable Ex mode
+map Q <Nop>
+
+" Get rid of the delay when hitting esc!
+" set noesckeys

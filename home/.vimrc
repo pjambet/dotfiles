@@ -566,8 +566,8 @@ set autoread
 nmap n nzz
 nmap N Nzz
 
-vmap <C-x> :!pbcopy<CR>
-vmap <C-c> :w !pbcopy<CR><CR>
+" vmap <C-x> :!pbcopy<CR>
+" vmap <C-c> :w !pbcopy<CR><CR>
 
 call togglebg#map("<F5>")
 
@@ -579,7 +579,7 @@ else
   set bg=light
 endif
 
-map <C-A> gg V G
+" map <C-A> gg V G
 set guifont=Inconsolata-dz\ for\ Powerline:h11
 set relativenumber
 
@@ -598,4 +598,5 @@ command! NumberToggle call NumberToggle()
 map Q <Nop>
 
 " Get rid of the delay when hitting esc!
-" set noesckeys
+set noesckeys
+" set timeoutlen=100

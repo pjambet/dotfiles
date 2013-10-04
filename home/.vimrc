@@ -4,6 +4,7 @@
 " call pathogen#infect()
 call pathogen#incubate()
 
+
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " BASIC EDITING CONFIGURATION
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -75,7 +76,7 @@ augroup vimrcEx
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 ts=2 et
-  autocmd FileType python,php,c,go set sw=4 sts=4 ts=4 et
+  autocmd FileType python,php,c,go,rust set sw=4 sts=4 ts=4 et
   autocmd FileType python setlocal formatoptions+=q
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
@@ -125,6 +126,8 @@ augroup vimrcEx
 
   au FocusLost * :set number
   au FocusGained * :set relativenumber
+
+  autocmd BufWritePre *.go Fmt
 augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,7 +146,10 @@ colorscheme solarized
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 ":set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%-4(%m%)%=%-19(%3l,%02c%03V%)
-set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '◀'
+" let g:airline_powerline_fonts=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
@@ -532,7 +538,7 @@ map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
-" sunmap b
+sunmap b
 sunmap e
 
 " CtrlP (awesome!) settings
@@ -597,3 +603,6 @@ map Q <Nop>
 " Get rid of the delay when hitting esc!
 set noesckeys
 " set timeoutlen=100
+" set ttimeoutlen=100
+" map <leader>dt :set makeprg=REUSEDB=1\ python\ manage.py\ test\ core\|:call MakeGreen()<CR>
+imap <c-b> import pdb; pdb.set_trace()

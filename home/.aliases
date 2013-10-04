@@ -11,6 +11,7 @@ alias stable="git co stable"
 alias gdi="git diff"
 alias gds="git diff --staged"
 alias gst="git st"
+alias gft="git fetch"
 
 #bundler aliases
 alias be="bundle exec"
@@ -40,3 +41,5 @@ alias mou='open /Applications/Mou.app'
 alias tmux="TERM=screen-256color-bce tmux"
 alias v="vim"
 alias vess="vim -u ~/.essential.vim"
+
+hgrep() { history | grep "$*"; }

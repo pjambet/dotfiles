@@ -97,3 +97,21 @@
 [submodule "home/.vim/bundle/CamelCaseMotion"]
 	path = home/.vim/bundle/CamelCaseMotion
 	url = git://github.com/bkad/CamelCaseMotion.git
+[submodule "home/.vim/bundle/vim-airline"]
+	path = home/.vim/bundle/vim-airline
+	url = https://github.com/bling/vim-airline
+[submodule "home/.vim/bundle/VimTestRunner"]
+	path = home/.vim/bundle/VimTestRunner
+	url = https://github.com/dahu/VimTestRunner.git
+[submodule "home/.vim/bundle/pytest.vim"]
+	path = home/.vim/bundle/pytest.vim
+	url = https://github.com/alfredodeza/pytest.vim.git
+[submodule "bundle/makegreen"]
+	path = bundle/makegreen
+	url = https://github.com/reinh/vim-makegreen
+[submodule "home/.vim/bundle/makegreen"]
+	path = home/.vim/bundle/makegreen
+	url = https://github.com/reinh/vim-makegreen
+[submodule "home/.vim/bundle/vim-golang"]
+	path = home/.vim/bundle/vim-golang
+	url = https://github.com/jnwhiteh/vim-golang.git

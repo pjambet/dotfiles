@@ -606,3 +606,5 @@ set noesckeys
 " set ttimeoutlen=100
 " map <leader>dt :set makeprg=REUSEDB=1\ python\ manage.py\ test\ core\|:call MakeGreen()<CR>
 imap <c-b> import pdb; pdb.set_trace()
+
+let jshint2_save = 1

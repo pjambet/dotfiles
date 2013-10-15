@@ -115,3 +115,6 @@
 [submodule "home/.vim/bundle/vim-golang"]
 	path = home/.vim/bundle/vim-golang
 	url = https://github.com/jnwhiteh/vim-golang.git
+[submodule "home/.vim/bundle/jshint2.vim"]
+	path = home/.vim/bundle/jshint2.vim
+	url = https://github.com/Shutnik/jshint2.vim.git

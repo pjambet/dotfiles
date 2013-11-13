@@ -82,6 +82,8 @@ augroup vimrcEx
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
   autocmd! BufRead,BufNewFile *.scss setfiletype scss
 
+  autocmd FileType javascript nnoremap <silent><F1> :JSHint<CR>|inoremap <silent><F1> <C-O>:JSHint<CR>|vnoremap <silent><F1> :JSHint<CR>|cnoremap <F1> JSHint
+
   autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:&gt;
   autocmd BufRead *.markdown  set ai formatoptions=tcroqn2 comments=n:&gt;
   fun! IsModified()
@@ -606,5 +608,3 @@ set noesckeys
 " set ttimeoutlen=100
 " map <leader>dt :set makeprg=REUSEDB=1\ python\ manage.py\ test\ core\|:call MakeGreen()<CR>
 imap <c-b> import pdb; pdb.set_trace()
-
-let jshint2_save = 1

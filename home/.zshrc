@@ -66,3 +66,5 @@ fi
 if [ -f ~/.env ]; then
   . ~/.env
 fi
+
+[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh  # This loads NVM

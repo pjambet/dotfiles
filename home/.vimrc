@@ -147,8 +147,8 @@ colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-":set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%-4(%m%)%=%-19(%3l,%02c%03V%)
-" set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ (%{&ft})\ %{fugitive#statusline()}%-4(%m%)%=%-19(%3l,%02c%03V%)
+set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " let g:airline_left_sep = '▶'
 " let g:airline_right_sep = '◀'
 " let g:airline_powerline_fonts=1

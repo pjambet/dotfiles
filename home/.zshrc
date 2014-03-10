@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails3 git textmate ruby lighthouse)
-plugins=(git rails3 ruby osx zsh-syntax-highlighting zsh-history-substring-search heroku npm brew vagrant django)
+plugins=(git rails ruby osx zsh-syntax-highlighting zsh-history-substring-search heroku npm brew vagrant django)
 
 source $ZSH/oh-my-zsh.sh
 

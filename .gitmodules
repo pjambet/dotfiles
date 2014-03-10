@@ -52,3 +52,9 @@
 [submodule "home/.vim/bundle/CamelCaseMotion"]
 	path = home/.vim/bundle/CamelCaseMotion
 	url = git://github.com/bkad/CamelCaseMotion.git
+[submodule "home/.vim/bundle/vim-rspec"]
+	path = home/.vim/bundle/vim-rspec
+	url = https://github.com/thoughtbot/vim-rspec.git
+[submodule "home/.vim/bundle/vim-javascript"]
+	path = home/.vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript

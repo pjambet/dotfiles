@@ -58,3 +58,15 @@
 [submodule "home/.vim/bundle/vim-javascript"]
 	path = home/.vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript
+[submodule "home/.vim/bundle/vim-localvimrc"]
+	path = home/.vim/bundle/vim-localvimrc
+	url = https://github.com/embear/vim-localvimrc.git
+[submodule "home/.vim/bundle/vim-less"]
+	path = home/.vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+[submodule "home/.vim/bundle/vim-flavored-markdown"]
+	path = home/.vim/bundle/vim-flavored-markdown
+	url = git://github.com/jtratner/vim-flavored-markdown.git
+[submodule "home/.vim/bundle/gundo.vim"]
+	path = home/.vim/bundle/gundo.vim
+	url = git@github.com:sjl/gundo.vim.git

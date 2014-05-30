@@ -12,6 +12,7 @@ alias gdi="git diff"
 alias gds="git diff --staged"
 alias gst="git st"
 alias gft="git fetch"
+alias gs="git show"
 
 #bundler aliases
 alias be="bundle exec"
@@ -20,7 +21,7 @@ alias bu="bundle update"
 alias bi="bundle install"
 
 #heroku aliases
-alias gph="git push heroku $(current_branch):master"
+# alias gph="git push heroku $(current_branch):master"
 
 # my aliases
 alias tvim="/Applications/MacVim.app/Contents/MacOS/Vim"
@@ -43,3 +44,7 @@ alias v="vim"
 alias vess="vim -u ~/.essential.vim"
 
 hgrep() { history | grep "$*"; }
+
+alias srails="spring rails"
+alias srake="spring rake"
+alias srspec="spring rspec"

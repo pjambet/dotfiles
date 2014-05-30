@@ -76,7 +76,7 @@ augroup vimrcEx
 
   "for ruby, autoindent with two spaces, always expand tabs
   autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 ts=2 et
-  autocmd FileType python,php,c,go,rust set sw=4 sts=4 ts=4 et
+  autocmd FileType python,php,c,go,rust,less,scss,javascript set sw=4 sts=4 ts=4 et
   autocmd FileType python setlocal formatoptions+=q
 
   autocmd! BufRead,BufNewFile *.sass setfiletype sass
@@ -309,6 +309,8 @@ map <leader>gp :CtrlP public<cr>
 map <leader>gg :topleft 100 :split Gemfile<cr>
 map <leader>f :CtrlP<cr>
 map <leader>F :CtrlP %%<cr>
+map <leader>h :CtrlPBuffer<cr>
+map <leader>H :CtrlPMRUFiles<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SWITCH BETWEEN TEST AND PRODUCTION CODE
@@ -420,11 +422,11 @@ function! DoWindowSwap()
     exe 'hide buf' markedBuf
 endfunction
 
-nmap <silent> <leader>mw :call MarkWindowSwap()<CR>
+nmap <silent> <leader>mw :call MarkWind wSwap()<CR>
 nmap <silent> <leader>pw :call DoWindowSwap()<CR>
 
 
-set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp
+set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor
 
 " Highlight text over 80
 highlight clear OverLength
@@ -507,7 +509,7 @@ let current_time = strftime('%H')
 if current_day == 0 || current_day == 6 || current_time > "20" || current_time < "09"
   set bg=dark
 else
-  set bg=light
+  set bg=dark
 endif
 
 " map <C-A> gg V G
@@ -536,3 +538,9 @@ set noesckeys
 imap <c-b> import pdb; pdb.set_trace()
 
 let g:netrw_list_hide='^\.DS'
+
+let g:localvimrc_whitelist = '/\(Users\|home\)/pierre/dev/\(harrys\|harrys-blog\).*'
+let g:localvimrc_sandbox = 0
+set re=1
+set ttyfast
+set lazyredraw

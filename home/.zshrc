@@ -27,10 +27,10 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugis would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails3 git textmate ruby lighthouse)
-plugins=(git rails ruby osx zsh-syntax-highlighting zsh-history-substring-search heroku npm brew vagrant django)
+plugins=(git osx zsh-syntax-highlighting zsh-history-substring-search heroku npm brew vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,4 +67,15 @@ if [ -f ~/.env ]; then
   . ~/.env
 fi
 
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh  # This loads NVM
+if [ -f ~/.private_env ]; then
+  . ~/.private_env
+fi
+
+# [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh  # This loads NVM
+
+for file in ~/.shrc/*.sh; do
+  source "$file"
+done
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

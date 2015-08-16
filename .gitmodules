@@ -67,9 +67,6 @@
 [submodule "home/.vim/bundle/vim-flavored-markdown"]
 	path = home/.vim/bundle/vim-flavored-markdown
 	url = git://github.com/jtratner/vim-flavored-markdown.git
-[submodule "home/.vim/bundle/gundo.vim"]
-	path = home/.vim/bundle/gundo.vim
-	url = git@github.com:sjl/gundo.vim.git
 [submodule "home/.vim/bundle/vim-tmux-navigator"]
 	path = home/.vim/bundle/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git

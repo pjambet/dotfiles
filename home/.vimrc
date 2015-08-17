@@ -1,14 +1,15 @@
 " " This is Gary Bernhardt's .vimrc file
 " " vim:set ts=2 sts=2 sw=2 expandtab:
 
+set nocompatible
+
 " call pathogen#infect()
-call pathogen#incubate()
+call pathogen#infect()
 
 
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " " BASIC EDITING CONFIGURATION
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
 " " allow unsaved background buffers and remember marks/undo for them
 set hidden
 " " remember more commands and search history
@@ -158,10 +159,10 @@ set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline(
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>y "*y
 " Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" nnoremap <c-j> <c-w>j
+" nnoremap <c-k> <c-w>k
+" nnoremap <c-h> <c-w>h
+" nnoremap <c-l> <c-w>l
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 " Can't be bothered to understand ESC vs <c-c> in insert mode
@@ -379,7 +380,7 @@ endif
 " Pierre jambet custom bindings :
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-call pathogen#helptags()
+" call pathogen#helptags()
 
 function! ToggleChars()
 
@@ -544,3 +545,7 @@ let g:localvimrc_sandbox = 0
 set re=1
 set ttyfast
 set lazyredraw
+
+if has('nvim')
+  nmap <BS> <C-W>h
+endif

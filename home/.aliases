@@ -41,6 +41,7 @@ alias mou='open /Applications/Mou.app'
 
 alias tmux="TERM=screen-256color-bce tmux"
 alias v="vim"
+alias nv="nvim"
 alias vess="vim -u ~/.essential.vim"
 
 hgrep() { history | grep "$*"; }

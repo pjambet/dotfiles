@@ -73,9 +73,9 @@ fi
 
 # [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh  # This loads NVM
 
-for file in ~/.shrc/*.sh; do
-  source "$file"
-done
+# for file in ~/.shrc/*.sh; do
+#   source "$file"
+# done
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

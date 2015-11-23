@@ -49,3 +49,4 @@ hgrep() { history | grep "$*"; }
 alias srails="spring rails"
 alias srake="spring rake"
 alias srspec="spring rspec"
+alias copy="tr -d '\n' | pbcopy"

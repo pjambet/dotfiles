@@ -16,4 +16,7 @@ if [[ -n $ZSH_VERSION ]]; then
 
   [[ -z $chpwd_functions ]] && chpwd_functions=()
   chpwd_functions=($chpwd_functions _autobin_hook)
+
+  # At startup time, run it, in case we're already in a whitelisted dir
+  _autobin_hook
 fi

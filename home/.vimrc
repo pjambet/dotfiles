@@ -454,7 +454,7 @@ command! HashSyntax :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = "!bundle exec bin/rspec {spec}"
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 
 map <leader>csc :%s/;/<cr>
 map <leader>g :GundoToggle<CR>

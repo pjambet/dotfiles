@@ -81,3 +81,6 @@ fi
 export PATH="/usr/local/heroku/bin:$PATH"
 
 source ~/.bin/tmuxinator.zsh
+
+# Start the ssh-agent
+eval `ssh-agent -s`

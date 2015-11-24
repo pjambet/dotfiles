@@ -1,4 +1,6 @@
 .VimballRecord
 .netrwhist
 home/.config/hub
-
+home/.rbenv/shims/
+home/.rbenv/version
+home/.rbenv/versions/

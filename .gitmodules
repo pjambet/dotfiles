@@ -82,3 +82,6 @@
 [submodule "home/.vim/bundle/tslime"]
 	path = home/.vim/bundle/tslime
 	url = https://github.com/jgdavey/tslime.vim.git
+[submodule "home/.rbenv/plugins/ruby-build"]
+	path = home/.rbenv/plugins/ruby-build
+	url = https://github.com/rbenv/ruby-build.git

@@ -47,13 +47,6 @@ function mcd() {
   mkdir -p "$1" && cd "$1";
 }
 
-plall() {
-for f in com_crm com_family com_social com_users frame_standard31
-do
-  cd $f && master && git pull && cd ..
-done
-}
-
 eval "$(rbenv init -)"
 
 # hub config
@@ -71,8 +64,6 @@ if [ -f ~/.private_env ]; then
   . ~/.private_env
 fi
 
-# [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh  # This loads NVM
-
 for file in ~/.shrc/*.sh; do
   source "$file"
 done
@@ -80,5 +71,4 @@ done
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-source ~/.bin/tmuxinator.zsh
-
+# source ~/.bin/tmuxinator.zsh

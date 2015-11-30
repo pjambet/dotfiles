@@ -73,9 +73,6 @@
 [submodule "home/.vim/bundle/tabular"]
 	path = home/.vim/bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "home/.vim/bundle/gundo"]
-	path = home/.vim/bundle/gundo
-	url = http://github.com/sjl/gundo.vim.git
 [submodule "home/.vim/bundle/vim-editorconfig"]
 	path = home/.vim/bundle/vim-editorconfig
 	url = https://github.com/editorconfig/editorconfig-vim.git

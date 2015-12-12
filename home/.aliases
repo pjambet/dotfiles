@@ -50,3 +50,7 @@ alias srails="spring rails"
 alias srake="spring rake"
 alias srspec="spring rspec"
 alias copy="tr -d '\n' | pbcopy"
+
+alias tml="tmux list-sessions"
+alias tma="tmux -2 attach -t $1"
+alias tmk="tmux kill-session -t $1"

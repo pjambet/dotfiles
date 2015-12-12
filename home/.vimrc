@@ -203,7 +203,6 @@ map <Down> <Nop>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
-map <leader>v :view %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
@@ -451,10 +450,16 @@ command! HashSyntax :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
 " Test-running stuff
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+" map <Leader>t :call RunCurrentSpecFile()<CR>
+" map <Leader>s :call RunNearestSpec()<CR>
+" map <Leader>a :call RunAllSpecs()<CR>
+" let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
+
+nmap <silent> <leader>sp :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>la :TestLast<CR>
+nmap <silent> <leader>v :TestVisit<CR>
 
 map <leader>csc :%s/;/<cr>
 map <leader>g :GundoToggle<CR>

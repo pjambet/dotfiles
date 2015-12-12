@@ -549,6 +549,14 @@ set lazyredraw
 if has('nvim')
   nmap <BS> <C-W>h
 endif
+
+" vim-test
+let test#strategy = "tslime"
+
+vmap <C-c><C-c> <Plug>SendSelectionToTmux
+nmap <C-c><C-c> <Plug>NormalModeSendToTmux
+nmap <C-c>r <Plug>SetTmuxVars
+
 " Enter accepts the current autocompletion instead of a new line
 " from: http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-:inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+" :inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"

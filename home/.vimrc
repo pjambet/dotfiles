@@ -1,3 +1,7 @@
+" Most of this file is copied from Gary Berhardt's vimrc:
+" https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
+" and some of it is mine. Enjoy!
+
 set nocompatible
 
 "NeoBundle Scripts-----------------------------

@@ -55,6 +55,7 @@ NeoBundle 'godlygeek/tabular'
 NeoBundle 'jgdavey/tslime.vim'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'mbbill/undotree'
+NeoBundle 'terryma/vim-multiple-cursors'
 
 
 " You can specify revision/branch/tag.

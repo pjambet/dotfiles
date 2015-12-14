@@ -16,6 +16,7 @@ vim-commentary
 vim-elixir
 vim-endwise
 vim-fugitive
+vim-multiple-cursors
 vim-surround
 vim-test
 vim-tmux-navigator

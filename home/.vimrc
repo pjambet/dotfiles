@@ -122,6 +122,7 @@ set wildmode=longest,list
 set wildmenu
 let mapleader=","
 
+" try to make redraw a little bit faster in big files
 set re=1
 set ttyfast
 set lazyredraw
@@ -151,9 +152,27 @@ map <leader>sv :vsplit<CR>
 map <leader>sh :split<CR>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""
+set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Auto Commands
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+augroup vimrcEx
+  " Clear all autocmds in the group
+  autocmd!
+
+  autocmd BufLeave,FocusLost * silent! wall
+  autocmd FocusLost * :set number
+  autocmd FocusGained * :set relativenumber
+
+augroup END
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " unite.vim
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " let g:unite_source_history_yank_enable = 1
 " call unite#filters#matcher_default#use(['matcher_fuzzy'])
 " nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
@@ -174,9 +193,9 @@ map <leader>sh :split<CR>
 " endfunction
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp.vim
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gc :CtrlP app/controllers<cr>
 map <leader>gm :CtrlP app/models<cr>
@@ -190,9 +209,9 @@ map <leader>h :CtrlPBuffer<cr>
 map <leader>H :CtrlPMRUFiles<cr>
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CamelCaseMotion
-"""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
@@ -231,3 +250,16 @@ if has("persistent_undo")
     set undodir=~/.undodir/
     set undofile
 endif
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" OPEN FILES IN DIRECTORY OF CURRENT FILE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-tmux-navigator
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:tmux_navigator_save_on_switch = 1

@@ -151,9 +151,22 @@ endif
 map <leader>sv :vsplit<CR>
 map <leader>sh :split<CR>
 
-
 set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+" Center screen after each bounce to new search result
+nmap n nzz
+nmap N Nzz
+
+set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor
+
+" Bind a shortup to :edit $MYVIMRC
+nmap <leader>r :edit $MYVIMRC<CR>
+
+" Disable arrow keys
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto Commands

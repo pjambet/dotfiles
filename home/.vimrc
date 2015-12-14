@@ -263,3 +263,14 @@ map <leader>e :edit %%
 " vim-tmux-navigator
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:tmux_navigator_save_on_switch = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-test
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let test#strategy = "tslime"
+nmap <silent> <leader>sp :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>v :TestVisit<CR>

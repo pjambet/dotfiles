@@ -8,6 +8,7 @@ neomru.vim
 neoyank.vim
 tabular
 tslime.vim
+undotree
 unite.vim
 vim-autoclose
 vim-colorschemes

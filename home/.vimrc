@@ -2,6 +2,7 @@
 " https://github.com/garybernhardt/dotfiles/blob/master/.vimrc
 " and some of it is mine. Enjoy!
 
+
 set nocompatible
 
 "NeoBundle Scripts-----------------------------
@@ -53,6 +54,8 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'godlygeek/tabular'
 NeoBundle 'jgdavey/tslime.vim'
 NeoBundle 'jimenezrick/vimerl'
+NeoBundle 'mbbill/undotree'
+
 
 " You can specify revision/branch/tag.
 " NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -135,7 +138,18 @@ call MapCR()
 colorscheme solarized
 set bg=dark
 
+" leader leader goes to the previous file
 nnoremap <leader><leader> <c-^>
+
+" fixes C-h for neovim
+if has('nvim')
+  nmap <BS> <C-W>h
+endif
+
+" split shortcuts
+map <leader>sv :vsplit<CR>
+map <leader>sh :split<CR>
+
 
 """""""""""""""""""""""""""""""""""""""""""""""
 " unite.vim
@@ -163,7 +177,6 @@ nnoremap <leader><leader> <c-^>
 """""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp.vim
 """""""""""""""""""""""""""""""""""""""""""""""
-map <leader>gR :call ShowRoutes()<cr>
 map <leader>gv :CtrlP app/views<cr>
 map <leader>gc :CtrlP app/controllers<cr>
 map <leader>gm :CtrlP app/models<cr>
@@ -186,3 +199,35 @@ map <silent> e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
 sunmap e
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MULTIPURPOSE TAB KEY
+" Indent if we're at the beginning of a line. Else, do completion.
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gist-vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:gist_post_private = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" undotree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <F5> :UndotreeToggle<cr>
+if has("persistent_undo")
+    set undodir=~/.undodir/
+    set undofile
+endif

@@ -4,3 +4,7 @@ home/.config/hub
 home/.rbenv/shims/
 home/.rbenv/version
 home/.rbenv/versions/
+home/.vim/bundle/*
+!home/.vim/bundle/.neobundle
+!home/.vim/bundle/NeoBundle.lock
+!home/.vim/bundle/neobundle.vim

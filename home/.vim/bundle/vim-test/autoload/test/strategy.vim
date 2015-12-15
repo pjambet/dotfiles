@@ -11,7 +11,7 @@ function! test#strategy#basic(cmd) abort
 endfunction
 
 function! test#strategy#neovim(cmd) abort
-  enew | call termopen(a:cmd) | startinsert
+  botright new | call termopen(a:cmd) | startinsert
 endfunction
 
 function! test#strategy#neoterm(cmd) abort
@@ -69,7 +69,11 @@ function! s:pretty_command(cmd) abort
   let clear = !s:Windows() ? 'clear' : 'cls'
   let echo  = !s:Windows() ? 'echo -e '.shellescape(a:cmd) : 'Echo '.shellescape(a:cmd)
 
-  return join([l:clear, l:echo, a:cmd], '; ')
+  if !exists('g:test#preserve_screen') || !g:test#preserve_screen
+    return join([l:clear, l:echo, a:cmd], '; ')
+  else
+    return join([l:echo, a:cmd], '; ')
+  endif
 endfunction
 
 function! s:Windows() abort

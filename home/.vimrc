@@ -57,6 +57,7 @@ NeoBundle 'jgdavey/tslime.vim'
 NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'terryma/vim-multiple-cursors'
+NeoBundle 'pangloss/vim-javascript'
 
 
 " You can specify revision/branch/tag.
@@ -182,6 +183,16 @@ augroup vimrcEx
   autocmd FocusLost * :set number
   autocmd FocusGained * :set relativenumber
 
+  autocmd BufWritePre * :%s/\s\+$//e
+
+  " From http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/
+  " Auto-clean fugitive buffers
+  autocmd BufReadPost fugitive://* set bufhidden=delete
+  " Running the following command will open the parent tree:
+  autocmd User fugitive
+        \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+        \   nnoremap <buffer> .. :edit %:h<CR> |
+        \ endif
 augroup END
 
 

@@ -72,3 +72,5 @@ done
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # source ~/.bin/tmuxinator.zsh
+
+test -s "$HOME/.kiex/scripts/kiex" && source "$HOME/.kiex/scripts/kiex"

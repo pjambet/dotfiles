@@ -160,7 +160,7 @@ set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline(
 nmap n nzz
 nmap N Nzz
 
-set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor
+set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor,deps
 
 " Bind a shortup to :edit $MYVIMRC
 nmap <leader>r :edit $MYVIMRC<CR>
@@ -233,6 +233,8 @@ map <leader>f :CtrlP<cr>
 map <leader>F :CtrlP %%<cr>
 map <leader>h :CtrlPBuffer<cr>
 map <leader>H :CtrlPMRUFiles<cr>
+
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:20,results:20'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -273,7 +273,7 @@ let g:gist_post_private = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " undotree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <F5> :UndotreeToggle<cr>
+nnoremap <F5> :UndotreeToggle \| :UndotreeFocus<cr>
 if has("persistent_undo")
     set undodir=~/.undodir/
     set undofile

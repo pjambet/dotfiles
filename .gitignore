@@ -8,3 +8,7 @@ home/.vim/bundle/*
 !home/.vim/bundle/.neobundle
 !home/.vim/bundle/NeoBundle.lock
 !home/.vim/bundle/neobundle.vim
+home/.emacs.d/savefile/*
+home/.emacs.d/ac-comphist.dat
+home/.emacs.d/recentf
+home/.emacs.d/projectile-bookmarks.eld

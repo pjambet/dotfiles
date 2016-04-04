@@ -134,9 +134,10 @@ list of categories."
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(emamux:use-nearest-pane t)
  '(magit-branch-arguments nil)
+ '(magit-gh-pulls-arguments (quote ("--open-new-in-browser" "--use-pr-editor")))
  '(package-selected-packages
    (quote
-    (fill-column-indicator auto-complete inf-ruby ag markdown-mode smartparens solarized-theme alchemist elixir-mode rspec-mode emamux-ruby-test projectile emamux zenburn-theme web-mode scss-mode ruby-end relative-line-numbers pbcopy magit-gh-pulls highlight-current-line fiplr evil-visualstar evil-surround evil-numbers evil-magit evil-leader evil-commentary editorconfig)))
+    (smart-mode-line feature-mode yaml-mode ensime fill-column-indicator auto-complete inf-ruby ag markdown-mode smartparens solarized-theme alchemist elixir-mode rspec-mode emamux-ruby-test projectile emamux zenburn-theme web-mode scss-mode ruby-end relative-line-numbers pbcopy magit-gh-pulls highlight-current-line fiplr evil-visualstar evil-surround evil-numbers evil-magit evil-leader evil-commentary editorconfig)))
  '(safe-local-variable-values
    (quote
     ((ruby-indent-level . 4)
@@ -149,4 +150,4 @@ list of categories."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Inconsolata")))))
+ '(default ((t (:inherit nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 120 :width normal :foundry "nil" :family "Inconsolata-g-12")))))

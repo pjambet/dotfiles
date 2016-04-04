@@ -200,6 +200,12 @@ ClearCtrlPCache	ctrlp.txt	/*ClearCtrlPCache*
 ControlP	ctrlp.txt	/*ControlP*
 CtrlP	ctrlp.txt	/*CtrlP*
 EditorConfig#AddNewHook()	editorconfig.txt	/*EditorConfig#AddNewHook()*
+FlooJoinWorkspace	floobits.txt	/*FlooJoinWorkspace*
+FlooLeaveWorkspace	floobits.txt	/*FlooLeaveWorkspace*
+FlooShareDirPrivate	floobits.txt	/*FlooShareDirPrivate*
+FlooShareDirPublic	floobits.txt	/*FlooShareDirPublic*
+FlooSummon	floobits.txt	/*FlooSummon*
+FlooToggleFollowMode	floobits.txt	/*FlooToggleFollowMode*
 Gist.vim	gist-vim.txt	/*Gist.vim*
 MultipleCursorsFind	multiple_cursors.txt	/*MultipleCursorsFind*
 ResetCtrlP	ctrlp.txt	/*ResetCtrlP*
@@ -259,6 +265,8 @@ editorconfig-installation	editorconfig.txt	/*editorconfig-installation*
 editorconfig-overview	editorconfig.txt	/*editorconfig-overview*
 editorconfig-settings	editorconfig.txt	/*editorconfig-settings*
 editorconfig.txt	editorconfig.txt	/*editorconfig.txt*
+floobits	floobits.txt	/*floobits*
+floobits.txt	floobits.txt	/*floobits.txt*
 fugitive	fugitive.txt	/*fugitive*
 fugitive#head(...)	fugitive.txt	/*fugitive#head(...)*
 fugitive#statusline()	fugitive.txt	/*fugitive#statusline()*
@@ -682,7 +690,6 @@ rails-:RV	rails.txt	/*rails-:RV*
 rails-:Rabbrev	rails.txt	/*rails-:Rabbrev*
 rails-:Rabbrev!	rails.txt	/*rails-:Rabbrev!*
 rails-:Rails	rails.txt	/*rails-:Rails*
-rails-:Rails!	rails.txt	/*rails-:Rails!*
 rails-:Rails-new	rails.txt	/*rails-:Rails-new*
 rails-:Rake	rails.txt	/*rails-:Rake*
 rails-:Rake!	rails.txt	/*rails-:Rake!*

@@ -12,9 +12,9 @@
 (setq compilation-scroll-output t)
 
 ;; default Latin font (e.g. Consolas)
-;; (set-face-attribute 'default nil :family "Consolas")
+;; (set-face-attribute 'default nil :family "Inconsolata")
 
-;; default font size (point * 10)
+;; default font size (point * 12)
 ;;
 ;; WARNING!  Depending on the default font,
 ;; if the size is not supported very well, the frame will be clipped
@@ -28,6 +28,8 @@
 
 (setq initial-frame-alist '((font . "Inconsolata-g-12")))
 (setq default-frame-alist '((font . "Inconsolata-g-12")))
+;; (setq default-frame-alist '((font . "-*-Inconsolata-g-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1")))
+
 
 ;; you may want to add different for other charset in this way.
 
@@ -208,7 +210,7 @@
   "Switch to previously open buffer.
 Repeated invocations toggle between the two most recently open buffers."
   (interactive)
-  (switch-to-buffer (other-buffer (current-Buffer) 1)))
+  (switch-to-buffer (other-buffer (current-buffer) 1)))
 
 
 (evil-leader/set-key "," 'switch-to-previous-buffer)
@@ -216,8 +218,8 @@ Repeated invocations toggle between the two most recently open buffers."
 (require 'editorconfig)
 (editorconfig-mode 1)
 
-(define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
-(global-fci-mode 1)
+;; (define-globalized-minor-mode global-fci-mode fci-mode (lambda () (fci-mode 1)))
+;; (global-fci-mode 1)
 
 (defvar sanityinc/fci-mode-suppressed nil)
 (defadvice popup-create (before suppress-fci-mode activate)
@@ -251,4 +253,32 @@ Repeated invocations toggle between the two most recently open buffers."
 
 (add-hook 'ruby-mode-hook 'projectile-mode)
 
-(ac-config-default)
+;; (ac-config-default)
+
+;; (use-package ensime
+;;   :commands ensime ensime-mode)
+
+(add-hook 'scala-mode-hook 'ensime-mode)
+(setq exec-path (append exec-path '("/usr/local/bin")))
+
+;; No coding '# coding: utf-8' at the top of files
+(setq ruby-insert-encoding-magic-comment nil)
+
+(defun rspec-runner ()
+  "Return command line to run rspec."
+  (let ((bundle-command (if (rspec-bundle-p) "bundle exec " ""))
+        (zeus-command (if (rspec-zeus-p) "zeus " nil))
+        (spring-command (if (rspec-spring-p) " " nil)))
+    (concat (or zeus-command spring-command bundle-command)
+            (if (rspec-rake-p)
+                (concat rspec-rake-command " spec")
+              rspec-spec-command))))
+
+
+(require 'magit-gh-pulls)
+(add-hook 'magit-mode-hook 'turn-on-magit-gh-pulls)
+
+(sml/setup)
+
+(global-auto-revert-mode 1)
+(setq auto-revert-check-vc-info t)

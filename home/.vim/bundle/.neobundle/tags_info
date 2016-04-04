@@ -2,6 +2,7 @@ CamelCaseMotion
 ag.vim
 ctrlp.vim
 editorconfig-vim
+floobits-neovim
 gist-vim
 neobundle.vim
 neomru.vim
@@ -17,6 +18,7 @@ vim-elixir
 vim-endwise
 vim-fugitive
 vim-javascript
+vim-jsx
 vim-multiple-cursors
 vim-rails
 vim-surround

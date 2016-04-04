@@ -58,6 +58,8 @@ NeoBundle 'jimenezrick/vimerl'
 NeoBundle 'mbbill/undotree'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'floobits/floobits-neovim'
 
 
 " You can specify revision/branch/tag.
@@ -139,7 +141,7 @@ function! MapCR()
 endfunction
 call MapCR()
 
-colorscheme solarized
+" colorscheme solarized
 set bg=dark
 
 " leader leader goes to the previous file
@@ -160,7 +162,7 @@ set statusline=%<%f\ [%{strlen(&fenc)?&fenc:'none'}]%h%m%r%{fugitive#statusline(
 nmap n nzz
 nmap N Nzz
 
-set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor,deps
+set wildignore+=*.o,*.obj,.git,node_modules,venv,*.pyc,tmp,vendor,deps,*.log
 
 " Bind a shortup to :edit $MYVIMRC
 nmap <leader>r :edit $MYVIMRC<CR>
@@ -170,6 +172,22 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
+
+" Rename current file
+function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New file name: ', expand('%'), 'file')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+endfunction
+map <leader>n :call RenameFile()<cr>
+
+" Open file
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+map <leader>e :edit %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Auto Commands
@@ -297,11 +315,11 @@ let g:tmux_navigator_save_on_switch = 1
 " vim-test
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let test#strategy = "tslime"
-nmap <silent> <leader>sp :TestNearest<CR>
-nmap <silent> <leader>t :TestFile<CR>
-nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>l :TestLast<CR>
-nmap <silent> <leader>v :TestVisit<CR>
+nmap <silent> <leader>sp :w \| :TestNearest<CR>
+nmap <silent> <leader>t :w \| :TestFile<CR>
+nmap <silent> <leader>a :w \| :TestSuite<CR>
+nmap <silent> <leader>l :w \| :TestLast<CR>
+nmap <silent> <leader>v :w \| :TestVisit<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -310,3 +328,24 @@ nmap <silent> <leader>v :TestVisit<CR>
 vmap <C-c><C-c> <Plug>SendSelectionToTmux
 nmap <C-c><C-c> <Plug>NormalModeSendToTmux
 nmap <C-c>r <Plug>SetTmuxVars
+
+
+
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+
+command! PromoteToLet :call PromoteToLet()
+map <leader>p :PromoteToLet<cr>
+
+" let g:python_host_prog = '/usr/local/bin/python3'
+
+" Switch hash syntax to 1.9
+command! HashSyntax :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
+
+" TODO: indent whole file
+" map <leader>,

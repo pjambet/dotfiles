@@ -2,12 +2,58 @@
 
 (setq evil-want-C-u-scroll t)
 
-
 (require 'package)
+
+; list the packages you want
+(setq package-list '(alchemist
+		     editorconfig
+		     elixir-mode
+		     evil
+		     evil-commentary
+		     evil-leader
+		     evil-surround
+		     evil-magit
+		     evil-visualstar
+		     inf-ruby
+		     magit
+		     magit-gh-pulls
+		     pbcopy
+		     relative-line-numbers
+		     rspec-mode
+		     smart-mode-line
+		     web-mode
+		     zenburn-theme))
+
+; list the repositories containing them
+; (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+;                          ("gnu" . "http://elpa.gnu.org/packages/")
+;                          ("marmalade" . "http://marmalade-repo.org/packages/")))
+
 (add-to-list 'package-archives
  	     '("melpa" . "http://melpa.org/packages/") t)
 
+; activate all the packages (in particular autoloads)
 (package-initialize)
+
+; fetch the list of packages available
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install the missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;; (require 'package)
+;; (add-to-list 'package-archives
+;;  	     '("melpa" . "http://melpa.org/packages/") t)
+
+;; (setq package-enable-at-startup nil)
+;; (package-initialize)
+;; (unless (package-installed-p 'use-package)
+;;   (package-refresh-contents)
+;;   (package-install 'use-package))
+;; (require 'use-package)
 
 (setq compilation-scroll-output t)
 

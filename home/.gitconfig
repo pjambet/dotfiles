@@ -1,0 +1,43 @@
+[user]
+	name = Pierre Jambet
+	email = pierre.jambet@gmail.com
+[heroku]
+	name = pierre.jambet@gmail.com
+	email = pierre.jambet@gmail.com
+[github]
+	user = pjambet
+	name = Pierre Jambet
+	email = pierre.jambet@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	ci = commit -v
+	co = checkout
+	st = status -sb
+	br = branch
+	pl = pull
+	ph = push
+	lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+	ready = rebase -i @{u}
+	purr = pull --rebase
+	; cleanup = !git gc && git clean -dfx && git stash clear
+	clean-branches = !git branch --merged | grep -v \"*\" | grep -v master | grep -v dev | xargs -n 1 git branch -d
+[core]
+	excludesfile = /Users/pierre/.gitignore_global
+	editor = /usr/local/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[help]
+	autocorrect = 5
+[diff]
+	algorithm = patience

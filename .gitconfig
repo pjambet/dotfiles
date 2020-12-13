@@ -5,3 +5,5 @@
 	email = pierre.jambet@gmail.com
 [init]
 	defaultBranch = main
+[code]
+	excludesfile = /Users/pierre/.gitignore_global

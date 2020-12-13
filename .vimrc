@@ -99,3 +99,7 @@ if empty(mapcheck('<C-W>', 'i'))
 endif
 
 " vim:set ft=vim et sw=2:
+
+" Beginning of my own shit:
+" https://vim.fandom.com/wiki/Mac_OS_X_clipboard_sharing
+set clipboard=unnamed

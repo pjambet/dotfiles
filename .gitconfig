@@ -1,0 +1,7 @@
+[pull]
+	rebase = false
+[user]
+	name = Pierre Jambet
+	email = pierre.jambet@gmail.com
+[init]
+	defaultBranch = main

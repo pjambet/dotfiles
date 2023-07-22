@@ -78,4 +78,9 @@
 (global-set-key (kbd "C-.") (lambda () (interactive) (scroll-up 1)))
 (global-set-key (kbd "C-,")   (lambda () (interactive) (scroll-down 1)))
 
+(define-key smartparens-mode-map (kbd "M-(") 'sp-wrap-round)
+(define-key smartparens-mode-map (kbd "M-[") 'sp-wrap-square)
+(define-key smartparens-mode-map (kbd "M-{") 'sp-wrap-curly)
+(define-key smartparens-mode-map (kbd "<C-backspace>") 'sp-backward-unwrap-sexp)
+
 (super-save-mode +1)
